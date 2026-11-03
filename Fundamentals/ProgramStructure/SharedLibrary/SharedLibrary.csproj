@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <!-- Must target a modern framework matching your SDK (e.g., net10.0) -->
+        <TargetFramework>net10.0</TargetFramework>
+        <!-- Ensure it builds as a library, NOT an executable -->
+        <OutputType>Library</OutputType>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+</Project>
