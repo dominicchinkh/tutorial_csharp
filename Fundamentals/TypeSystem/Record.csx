@@ -9,7 +9,10 @@ using System;
 public record class Person(string Name, int Age);
 
 // Record classes can inherit from other record classes:
-public record class Employee(string Name, int Age, string Department) : Person(Name, Age);
+public record class Employee(string Name, int Age, string Department) : Person(Name, Age)
+{
+    public override string ToString() => $"{Name} ({Age}) - {Department}";
+}
 
 //---------------
 // Record struct
