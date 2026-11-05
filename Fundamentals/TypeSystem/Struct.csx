@@ -3,13 +3,19 @@
 /*
  *  Use a struct when your type:
  *
- *    * Represents a single value or a small group of related values (roughly 16 
+ *    - Represents a single value or a small group of related values (roughly 16 
  *      bytes or less)
- *    * Has value semantics—two instances with the same data should be equal
- *    * Is primarily a data container rather than a model of behavior
- *    * Doesn't need inheritance from a base type (structs can't inherit from other 
+ *    - Has value semantics—two instances with the same data should be equal
+ *    - Is primarily a data container rather than a model of behavior
+ *    - Doesn't need inheritance from a base type (structs can't inherit from other 
  *      structs or classes, but they can implement interfaces)
  */
+
+// Note: Supports value equality through ValueType.Equals because all structs inherit
+//       from System.ValueType. But the default implementation uses reflection. 
+//       Reflection means the program has to dynamically inspect the struct's layout, 
+//       look up its fields, and compare them one by one while the code is running, 
+//       which is slower. The default implementation doesn't generate ==/!= operators
 
 var p1 = new Point { X = 3, Y = 4 };
 var p2 = p1; // copies the data

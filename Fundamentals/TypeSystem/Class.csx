@@ -67,6 +67,7 @@ static class MathHelpers
 
 class ConnectionOptions
 {
+    // init is an accessor that creates an immutable-after-construction property
     public string Host { get; init; } = "localhost";
     public int Port { get; init; } = 80;
     public bool UseSsl { get; init; }
