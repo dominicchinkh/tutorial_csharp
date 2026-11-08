@@ -29,7 +29,7 @@
     // names
     var subscript = (A: "", B: 0);
     subscript = person;
-    Console.WriteLine(person);
+    Console.WriteLine(subscript);
 }
 
 //------------------------
@@ -119,7 +119,7 @@ static (double Minimum, double Maximum, double Average) ComputeStats(List<double
     Console.WriteLine(order1 == order2); // True
     Console.WriteLine(order1 == order3); // False
 
-    // Element names don't affect equality—only values matter
+    // Element names don't affect equality - only values matter
     var named = (X: 1, Y: 2);
     var different = (A: 1, B: 2);
     Console.WriteLine(named == different); // True
