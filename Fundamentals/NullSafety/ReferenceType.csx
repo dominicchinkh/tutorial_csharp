@@ -80,13 +80,29 @@ string? LookUpName(string id) => id switch
 //----------------------------------------
 // Attributes that describe API contracts
 
+/*
+ *  Common attributes include:
+ *
+ *  NotNullWhenAttribute: 
+ *    The argument is not-null when the method returns the specified Boolean
+ *
+ *  NotNullIfNotNullAttribute:
+ *    The return value is not-null whenever the named argument is not-null
+ *
+ *  MemberNotNullAttribute: 
+ *    The listed members are not-null after the method returns
+ *
+ *  DoesNotReturnAttribute: 
+ *    The method never returns normally (for example, it always throws)
+ */
+
 string? ReadInput() => "hello";
 
 bool IsPresent(
 
     // Tell the compiler that when `IsPresent` returns true, `value` is not-null
     [NotNullWhen(true)] 
-     string? value
+    string? value
 
     ) => !string.IsNullOrEmpty(value);
 

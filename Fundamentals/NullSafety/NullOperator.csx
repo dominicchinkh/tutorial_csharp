@@ -139,5 +139,5 @@
 
 class AppConfig
 {
-    public string Theme { get; set; }
+    public string? Theme { get; set; }
 }
